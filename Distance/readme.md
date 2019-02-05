@@ -1,5 +1,7 @@
 # Distance距离度量模块
-
+   
+   Distance距离度量模块包括6种统计分析中常用的距离度量——欧氏距离，马氏距离，曼哈顿距离，标准欧氏距离，余弦距离。
+   
    ## 1. 引用头文件"Distance.py"
     import Distance as di
 
