@@ -40,3 +40,6 @@
     print("使用本库的kendall相关矩阵计算结果 = ")
     print(res)
     
+   ## 附注：
+   > 1. example.py中提供了一份使用CorreCoef相关系数与相关系数矩阵求解模块的示例代码。
+    
