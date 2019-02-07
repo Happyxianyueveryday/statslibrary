@@ -20,6 +20,9 @@
     res=dis.euc_distance(a,b)  #求解欧氏距离
     print("欧氏距离 = ", res)        
     
+    >>> 输出
+    欧氏距离 =  5.656854249492381
+    
    ## 4. 求解马氏距离
    > 1. 使用mah_distance成员方法来计算和求解马氏距离，该马氏距离成员函数有如下三种常见的应用场景，对应于不同的参数调用方法。假设第一个参数为向量a，第二个参数为向量b，第三个参数为协方差矩阵cov_vec。
    > 2. 场景1：计算一个未分类向量到一个类别的马氏距离: 这时a为未分类向量，b为一个类别的均值向量，cov_vec为该类别的协方差矩阵，返回未分类变量a到某个类别的马氏距离。
@@ -31,6 +34,10 @@
     res=dis.mah_distance(a,b,cov)  #求解马氏距离
     print("马氏距离 = ", res) 
     
+    >>> 输出
+     马氏距离 =  1.4142135623730951
+    
+    
    ## 5. 求解曼哈顿距离
    > 1. 使用man_distance成员方法来计算和求解曼哈顿距离。
    > 2. 第一个参数为第一个向量a，类型为np.array。
@@ -40,6 +47,9 @@
     b=np.array([2 for i in range(128)])
     res=dis.man_distance(a,b)  #求解曼哈顿距离
     print("曼哈顿距离 = ", res) 
+    
+    >>> 输出
+    曼哈顿距离 =  64.0
     
    ## 6. 求解闵可夫斯基距离
    > 1. 使用min_distance成员方法来计算和求解闵可夫斯基距离。
@@ -51,6 +61,9 @@
     b=np.array([2 for i in range(128)])
     res=dis.min_distance(a,b,3)  #求解闵可夫斯基距离
     print("闵可夫斯基距离 = ", res) 
+    
+    >>> 输出
+    闵科夫斯基距离 =  2.5198420997897464
    
    ## 7. 求解标准欧氏距离
    > 1. 使用standard_euc_distance成员方法来计算和求解标准欧氏距离。
@@ -62,7 +75,10 @@
     b=np.array([2 for i in range(128)])
     s=np.array([0.27 for i in range(128)])
     res=dis.standard_euc_distance(a,b,s)  #求解标准欧氏距离
-    print("标准欧氏距离 = ", res)          
+    print("标准欧氏距离 = ", res)       
+    
+    >>> 输出
+    标准欧氏距离 =  10.886621079036345
    
    ## 8. 求解余弦距离
    > 1. 使用cos_distance成员方法来计算和求解余弦距离。
@@ -73,6 +89,9 @@
     b=np.array([2 for i in range(128)])
     res=dis.cos_distance(a,b)       #求解余弦距离
     print("标准余弦距离 = ", res)     
+    
+    >>> 输出
+    余弦距离 =  1.0
    
    ## 附注：
    > 1. example.py中给出了使用Distance距离度量模块的一份示例代码。
