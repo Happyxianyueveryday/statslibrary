@@ -1,6 +1,6 @@
  # GeneralStats一般统计量计算模块
    
-   GeneralStats一般统计量计算模块包含常见统计量的计算方法，这些常见统计量包括：平均数，中位数，众数，分位数，极差，方差，标准差，偏度，峰度。
+   GeneralStats一般统计量计算模块包含常见统计量的计算与求解方法，这些常见统计量包括：平均数，中位数，众数，分位数，极差，方差，标准差，偏度，峰度。
    
    ## 1. 引用头文件"GeneralStats.py"
     import GeneralStats as gs
