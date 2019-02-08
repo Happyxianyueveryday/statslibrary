@@ -65,10 +65,10 @@
    > 4. 第三个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
    > 5. 第四个参数指定当所需分位数位于两个数据点i<j之间时要使用的插值方法，类型为str，取值范围为{'linear', 'lower', 'higher', 'midpoint'}。
    >> 若分位值fraction(0和1之间)计算得到的分位数下标不是整数，该下标两侧的数组元素分别为i和j，则:
-   >> 'linear': i+fraction*(j-i)
-   >> 'lower': i
-   >> 'higher': j
-   >> 'midpoint': (i+j)/2
+   + 'linear': i+fraction*(j-i)
+   + 'lower': i
+   + 'higher': j
+   + 'midpoint': (i+j)/2
    >> 若使用范围之外的可选参数，均将默认使用'midpoint'模式进行分位数的求解
      
     data=np.array([[1, 1, 2, 2, 3],[2, 2, 3, 3, 5],[1, 4, 3, 3, 3],[2, 4, 5, 5, 3]])
