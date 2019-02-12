@@ -20,9 +20,10 @@
     pca.fit(data,rowvar=False)
     
   ## 4. 使用测试集进行PCA降维
-  > 1. 使用transform成员方法对测试集进行PCA降维。
+  > 1. 使用transform成员方法对测试集进行PCA降维。特别地，在使用该方法进行PCA降维之前，首先应当调用fit进行PCA主成分分析。
   > 2. 第一个参数data为测试集矩阵，即进行PCA降维的数据集，类型为np.array。在该方法中首先会对测试集矩阵进行标准化。
   > 3. 第二个参数rowvar指定参数data的每一行或者每一列代表一个特征，类型为bool。rowvar=True指定每一行代表一个特征，即每一列代表一个样本向量；rowvar=False指定每一列代表一个特征，即每一行代表一个样本向量，默认值为rowvar=True。
+  > 4. 返回值为降维后的测试集矩阵，其中每一列代表一个特征，类型为np.array。
   
     data = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
     res = pca.transform(data,rowvar=False)
@@ -36,7 +37,7 @@
     [-2.22189802]
     [-3.6053038 ]]
     
-  > 可以将上述结果与sklearn.decomposition.PCA的结果进行对比以验证其正确性，如下所示。
+  > 可以将上述结果与sklearn库的sklearn.decomposition.PCA类的结果进行对比以验证其正确性，如下所示。
   
     from sklearn.decomposition import PCA
     pca1 = PCA(n_components=1)
@@ -52,7 +53,30 @@
     [-3.6053038 ]]
    
     
-  ## 5. 输出
+  ## 5. 输出特征的权重
+  > 1. 使用variance_ratio方法输出特征的权重。特别地，在使用该方法获得特征权重之前，首先应当调用fit进行PCA主成分分析。
+  > 2. 唯一参数only指定是否仅保留降维后的特征的权重，类型为bool。only=True指定仅保留降维后的n_components个特征的权重，only=False则保留全部特征的权重，默认值为only=False。
+  > 3. 返回值为各个特征权重的向量，类型为np.array。
+  
+    ratio = pca.variance_ratio(only=True)
+    print("各特征的权重为: ratio = ",ratio)
+   
+    >>> 输出
+    各特征的权重为: ratio =  [0.99244289]
+  
+  > 可以将上述结果与sklearn库的sklearn.decomposition.PCA类的结果进行对比以验证其正确性，如下所示。
+    
+    ratio = pca1.explained_variance_ratio_
+    print("各特征的权重为: ratio = ",ratio)
+    
+    >>> 输出
+    各特征的权重为: ratio =  [0.99244289]
+    
+   
+   ## 附注：
+   > 1. example.py中提供了一份使用PCA模块的示例代码。
+  
+  
    
    
    
