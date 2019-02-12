@@ -72,6 +72,20 @@
     >>> 输出
     各特征的权重为: ratio =  [0.99244289]
     
+   ## 6. 修改保留的特征数
+   > 1. 使用set_components方法修改需要保留的特征数。特别地，修改需要保留的特征数后，需要重新使用fit成员方法进行训练。
+   > 2. 唯一参数n_components指定新的需要保留的特征数，类型为int。
+   
+    pca = pc.PCA(n_components=1)
+    pca.set_components(n_components=2)
+    
+   ## 7. 输出各个特征对应的特征值和特征向量
+   > 1. 分别使用eigenvalue, eigenvector成员方法输出各个特征对应的特征值和特征向量。特别地，在使用该方法获得特征值或特征向量之前，首先应当调用fit进行PCA主成分分析。
+   > 2. 这两个成员方法的唯一参数only指定是否仅保留降维后的特征的特征值或特征向量，类型为bool。only=True指定仅保留降维后的n_components个特征的特征值或特征向量，only=False则保留全部特征的特征值或特征向量，默认值为only=False。
+   
+    pca = pc.PCA(n_components=1)
+    value=pca.eigenvalue(only=True)
+    vector=pca.eigenvector(only=True)
    
    ## 附注：
    > 1. example.py中提供了一份使用PCA模块的示例代码。
