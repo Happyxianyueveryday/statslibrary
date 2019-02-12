@@ -26,6 +26,7 @@
   > 4. 返回值为降维后的测试集矩阵，其中每一列代表一个特征，类型为np.array。
   
     data = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+    pca.fit(data,rowvar=False)
     res = pca.transform(data,rowvar=False)
     print("使用本库进行计算得到的PCA降维结果为: res = ", res)
     
@@ -41,6 +42,7 @@
   
     from sklearn.decomposition import PCA
     pca1 = PCA(n_components=1)
+    data = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
     res = pca1.fit_transform(data)
     print("使用sklearn.decomposition.PCA 验证的结果为: res = ", res)
     
@@ -58,6 +60,9 @@
   > 2. 唯一参数only指定是否仅保留降维后的特征的权重，类型为bool。only=True指定仅保留降维后的n_components个特征的权重，only=False则保留全部特征的权重，默认值为only=False。
   > 3. 返回值为各个特征权重的向量，类型为np.array。
   
+    pca1 = PCA(n_components=1)
+    data = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+    pca.fit(data,rowvar=False)
     ratio = pca.variance_ratio(only=True)
     print("各特征的权重为: ratio = ",ratio)
    
@@ -82,10 +87,20 @@
    ## 7. 输出各个特征对应的特征值和特征向量
    > 1. 分别使用eigenvalue, eigenvector成员方法输出各个特征对应的特征值和特征向量。特别地，在使用该方法获得特征值或特征向量之前，首先应当调用fit进行PCA主成分分析。
    > 2. 这两个成员方法的唯一参数only指定是否仅保留降维后的特征的特征值或特征向量，类型为bool。only=True指定仅保留降维后的n_components个特征的特征值或特征向量，only=False则保留全部特征的特征值或特征向量，默认值为only=False。
+   > 3. eigenvalue, eigenvector成员方法的返回值分别为特征值组成的向量和特征向量组成的矩阵，类型均为np.array。
    
+    data = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
     pca = pc.PCA(n_components=1)
+    pca.fit(data,rowvar=False)
     value=pca.eigenvalue(only=True)
     vector=pca.eigenvector(only=True)
+    print("各特征的特征值为: ",pca.eigenvalue(only=False))
+    print("各特征的特征向量为: ",pca.eigenvector(only=False))
+    
+    >>> 输出
+    各特征的特征值为:  [7.93954312 0.06045688]
+    各特征的特征向量为:  [[-0.83849224  0.54491354]
+    [-0.54491354 -0.83849224]]
    
    ## 附注：
    > 1. example.py中提供了一份使用PCA模块的示例代码。
