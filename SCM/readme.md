@@ -7,6 +7,10 @@
     import SCM
     
  ## 2. 创建一个SCM对象
+ > 0. 函数原型
+ 
+    def __init__(self, classdist='nearest', sampledist='euc', p=1)
+    
  > 1. 创建一个SCM对象最多需要三个参数。
  > 2. 第一个参数classdist指定系统聚类法中所使用的类间距离的种类,类型为str。取值范围为classdist={'nearest','farthest','average','centroid','square'}，默认值为classdist='nearest'，参数的取值的具体含义如下所示：
  >>  + 'nearest' : 类间最近距离，类间最近距离为两个类别之间样本距离的最小值
@@ -23,3 +27,35 @@
  > 4. 第三个参数p为闵可夫斯基距离的维数p，类型为int。默认值为p=1。若参数classdist=='square'或者参数sampledist!='min'，则此参数不被使用，可以保持缺省。
   
     scm=SCM.SCM(classdist='nearest', sampledist='euc')
+    
+ ## 3. 更改系统聚类的距离参数
+ > 0. 函数原型
+ 
+     def reset(self, classdist='nearest', sampledist='euc', p=1)
+     
+ > 1. 即使在已经创建了一个SCM对象的情况下，仍然可以通过reset成员方法重新设置类间距离以及样本间距离的种类，该方法同样接受三个参数，且三个参数与初始化时相同，请参见上述创建SCM队对象部分的参数介绍。
+ 
+    scm.reset(classdist='nearest' ,sampledist='mah')
+ 
+ ## 4. 进行系统聚类
+ > 0. 函数原型
+ 
+    def fit(self, data, kind=2, rowvar=False)
+    
+ > 1. 使用fit成员方法进行系统聚类。
+ > 2. 第一个参数data为原始样本矩阵或者数据集，类型为np.array。
+ > 3. 第二个参数kind指定类别数目，类型为int。即指定样本向量需要被分为多少类，该值必须小于或者等于样本的数量。
+ > 4. 第三个参数rowvar指定每行代表一个变量或者每列代表一个变量，类型为bool。rowvar=True指定每行代表一个变量，即每列代表一个样本；rowvar=False指定每列代表一个变量，即每行代表一个样本。默认值为rowvar=False。
+ > 5. 返回值为分类结果，类型为list。分类结果的形式为一个列表，该列表中包含若干个子列表，每个子列表代表一个类别，该子列表中含有该类别中的样本序号(样本序号为该样本向量在样本矩阵data中所在行下标或者列下标，从下标0开始)。
+ 
+     data=np.array([[1,3,5,7,9],[2,4,6,8,10],[1,4,5,8,9],
+                   [1100,1300,1500,1700,1900],[1200,1400,1600,1800,2000],[1100,1400,1500,1800,1900],
+                   [11000,13000,15000,17000,19000],[12000,14000,16000,18000,20000],[11000,14000,15000,18000,19000]
+                   ]) #12个样本，明显属于3类
+     scm=SCM.SCM(classdist='nearest', sampledist='euc')
+     res=scm.fit(data,kind=3)
+     print("样本间欧氏距离+类间最近距离: res = ", res)
+     
+     >>> 输出
+     样本间欧氏距离+类间最近距离: res =  [[0, 2, 1], [3, 5, 4], [6, 8, 7]]  #表明下标为0,2,1的样本向量为一类；3,5,4的为一类；6,8,7的为一类。
+  
