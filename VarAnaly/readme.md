@@ -11,6 +11,10 @@
     var=va.VarAnaly()
 
    ## 3. 进行单因素方差分析
+   > 0. 函数原型
+   
+      def single_anova(self, data, rowvar=False)
+      
    > 1. 使用single_anova成员方法进行单因素方差分析
    > 2. 第一个参数data为二维样本集矩阵，类型为np.array
    > 3. 第二个参数rowvar指定每一行或者每一列作为因素的不同水平，类型为bool。rowvar=True指定每一行代表因素的一个水平，即每一列作为一个观察结果；rowvar=False指定每一列代表因素的一个水平，即每一行作为一个观察结果，默认rowvar=True。
@@ -55,6 +59,10 @@
     
     
    ## 4. 进行两因素方差分析
+   > 0. 函数原型
+   
+      def double_anova(self, data)
+      
    > 1. 使用double_anova成员方法进行两因素方差分析
    > 2. 第一个参数data为三维样本集矩阵，该矩阵的格式严格要求如下：其中每一行代表因素A的不同水平，每一列代表因素B的不同水平，data[i][j]中则包含因素A在水平i，因素B在水平j下的若干个样本观察值。
    >> 例如：对于如下的火箭射程的因素样本表。
