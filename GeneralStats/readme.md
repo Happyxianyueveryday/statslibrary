@@ -11,6 +11,10 @@
     gen=gs.GeneralStats()
    
    ## 3. 计算样本的平均值
+   > 0. 函数原型
+   
+      def average(self, data, rowvar=True)
+   
    > 1. 使用average成员方法计算样本的平均值。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -27,6 +31,10 @@
     data1平均值 =  [3.]
    
    ## 4. 计算样本的中位值
+   > 0. 函数原型
+   
+      def median(self, data, rowvar=True)
+   
    > 1. 使用median成员方法计算样本的中位值。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -43,6 +51,10 @@
     data1中位值 =  [3]
    
    ## 5. 计算样本的众数
+   > 0. 函数原型
+   
+      def mode(self, data, rowvar=True)
+   
    > 1. 使用mode成员方法计算样本的众数。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -59,6 +71,10 @@
     data1众数值 =  [1]
    
    ## 6. 计算样本的分位数
+   > 0. 函数原型
+   
+      def quantile(self, data, fraction, rowvar=True, interpolation='linear')
+   
    > 1. 使用quantile成员方法计算样本的分位数。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数fraction指定分位百分比，类型为float，fraction必须满足大于等于0且小于等于1。
@@ -100,6 +116,10 @@
     data1 1.0分位数值 =  [5]
     
    ## 7. 计算样本的极差
+   > 0. 函数原型
+   
+      def range(self, data, rowvar=True)
+   
    > 1. 使用range成员方法计算样本的极差。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -116,6 +136,10 @@
     data1极差 =  [4]
     
    ## 8. 计算样本的方差
+   > 0. 函数原型
+   
+      def variance(self, data, rowvar=True)
+   
    > 1. 使用variance成员方法计算样本的方差。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -132,6 +156,10 @@
     data1方差 =  [2.]
 
    ## 9. 计算样本的标准差
+   > 0. 函数原型
+   
+      def standard_dev(self, data, rowvar=True)
+   
    > 1. 使用standard_dev成员方法计算样本的标准差。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -148,6 +176,10 @@
     data1标准差 =  [1.41421356]
    
    ## 10. 计算样本的偏度
+   > 0. 函数原型
+   
+      def skewness(self, data, rowvar=True)
+   
    > 1. 使用skewness成员方法计算样本的偏度。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -171,6 +203,10 @@
     
     
    ## 11. 计算样本的峰度
+    > 0. 函数原型
+   
+      def kurtosis(self, data, rowvar=True)
+   
    > 1. 使用kurtosis成员方法计算样本的峰度。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
