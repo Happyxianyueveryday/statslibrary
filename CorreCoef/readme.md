@@ -11,6 +11,10 @@
     coe=co.CorreCoef()
    
    ## 3. 计算pearson相关系数矩阵
+   > 0. 函数原型
+   
+      def pearson_coef(self, data, rowvar=True)
+   
    > 1. 使用pearson_coef成员方法计算pearson相关系数矩阵。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。由相关系数的定义，变量和样本的数量均至少有两个，即至少为2×2矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。
@@ -30,6 +34,10 @@
      [ 1.         -0.18898224  1.          1.          1.        ]]
     
    ## 4. 计算spearman相关系数矩阵
+   > 0. 函数原型
+   
+      def spearman_coef(self, data, rowvar=True)
+   
    > 1. 使用spearman_coef成员方法计算spearman相关系数矩阵。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。由相关系数的定义，变量和样本的数量均至少有两个，即至少为2×2矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。变量的数量必须大于或者等于2。
@@ -49,6 +57,10 @@
      [1.  0.5 1.  1.  1. ]]
     
    ## 5. 计算kendall相关系数矩阵
+   > 0. 函数原型
+   
+      def kendall_coef(self, data, rowvar=True)
+   
    > 1. 使用kendall_coef成员方法计算kendall相关系数矩阵。
    > 2. 第一个参数data为由各个变量取值，或者由各个样本向量组成的矩阵。由相关系数的定义，变量和样本的数量均至少有两个，即至少为2×2矩阵。类型为np.array。
    > 3. 第二个参数rowvar指定每一行或者每一列作为样本向量，类型为bool：rowvar=True指定每一列作为一个样本向量，即每一行代表一个变量；rowvar=False指定每一行作为一个样本向量，即每一列代表一个变量。变量的数量必须大于或者等于2。
