@@ -21,9 +21,11 @@ statslibrary中所实现的各个分析算法请参见如下的目录，各个�
 #### 1. PCA：主成分分析模块
 
 ### 聚类分析部分
-#### 1. Kmeans：Kmeans聚类法模块
-#### 2. SCM：系统聚类法模块
-#### 3. FCM：模糊聚类法模块
+#### 1. Kmeans：K-Means, Kmeans聚类法模块
+#### 2. SCM：Ward-Hierarchical-Clustering, 系统聚类法（又称层次聚类法）模块 
+#### 3. Spectral：Spectral-Clustering, 谱聚类算法模块
+#### 4. Affinity：Affinity-Propagation，AP聚类算法
+#### 5. DBSCAN: DBSCAN-Clustering，DBSCAN聚类算法
 
 ### 判别分析部分
 #### 1. DistanceDiscri：距离判别分析模块
