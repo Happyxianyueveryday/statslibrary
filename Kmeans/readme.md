@@ -1,6 +1,6 @@
 # Kmeans聚类模块
 
-  Kmeans聚类模块包含Kmeans聚类算法，以及准确率分析等算法的具体实现。
+  Kmeans聚类模块包含Kmeans聚类算法(K-means)，以及准确率分析等算法的具体实现。
   
   ## 1. 引用头文件"Kmeans.py"
   
