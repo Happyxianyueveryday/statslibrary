@@ -29,7 +29,7 @@ statslibrary中所实现的各个分析算法请参见如下的目录，各个�
 
 ### 判别分析部分
 #### 1. DistanceDiscri：距离判别分析模块
-#### 2. BayesDiscri：贝叶斯判别分析模块
+#### 2. BayesDiscri：朴素贝叶斯判别分析模块
 #### 3. FisherDiscri：费歇判别分析模块
 
 ### 因子分析部分
