@@ -6,15 +6,15 @@
  
  BayesDiscri朴素贝叶斯判别模块主要包括朴素贝叶斯判别算法的实现。
 
- # 1. 引用头文件"BayesDiscri.py"
+ ## 1. 引用头文件"BayesDiscri.py"
  
     import BayesDiscri as bayes
     
- # 2. 创建BayesDiscri对象
+ ## 2. 创建BayesDiscri对象
  
     by=bayes.BayesDiscri()
     
- # 3. 使用训练集样本进行训练
+ ## 3. 使用训练集样本进行训练
  > 0. 函数原型
  
     def train(self, data, rowvar=False)
@@ -40,7 +40,7 @@
     by=bayes.BayesDiscri()
     by.train(train_data,rowvar=False)       # 使用train成员方法使用训练集进行训练
     
-  # 4. 对测试集样本进行判别和分类
+  ## 4. 对测试集样本进行判别和分类
   > 0. 函数原型
   
      def discriminate(self, data, rowvar=False)
@@ -64,6 +64,6 @@
     分类结果: res =  ['不嫁', '嫁']
     测试集样本属于各个类别的概率: res =  [{'不嫁': 0.9230769230769231, '嫁': 0.07692307692307693}, {'不嫁': 0.2857142857142857, '嫁': 0.7142857142857143}]
     
-   # 附注:
+   ## 附注:
    > 1. example.py中提供了基于婚恋小型调查问卷数据集的贝叶斯判别的一份示例代码。
  
