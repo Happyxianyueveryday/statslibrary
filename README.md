@@ -1,7 +1,7 @@
 # statslibrary
 中山大学统计分析方法课程实验作业/Experimental homework of statistical-analysis-method-course in SYSU.
 
-statslibrary是个人实现的，一个实验性质的，基于numpy库手写实现的统计分析方法库，注重于算法的手工实现，因此不会使用python库中较为现成的方法。其中包含《统计分析方法》中的主要的统计分析技术。
+statslibrary是个人实现的，一个实验性质的，基于numpy库实现的一些统计算法。其中包含《统计分析方法》中的主要的统计分析技术。
 
 statslibrary中所实现的各个分析算法请参见如下的目录，各个算法模块的具体使用方法以及说明文档，请参见相应文件夹下的readme文件。
 
