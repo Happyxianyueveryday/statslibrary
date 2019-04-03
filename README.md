@@ -23,13 +23,13 @@ statslibrary是个人实现的，基于numpy库的小型统计分析方法库，
 ### 聚类分析部分
 #### 1. Kmeans：K-Means, Kmeans聚类法模块
 #### 2. SCM：Ward-Hierarchical-Clustering, 系统聚类法（又称层次聚类法）模块 
-#### 3. Spectral：Spectral-Clustering, 谱聚类算法模块
-#### 4. DBSCAN：
+#### 3. \*Spectral：Spectral-Clustering, 谱聚类算法模块
+#### 4. \*DBSCAN：
 
 ### 判别分析部分
 #### 1. DistanceDiscri：距离判别分析模块
 #### 2. BayesDiscri：朴素贝叶斯判别分析模块
-#### 3. FisherDiscri：费歇判别分析模块
+#### 3. \*FisherDiscri：费歇判别分析模块
 
 ### 因子分析部分
-#### 1. FacAnaly：因子分析模块
+#### 1. \*FacAnaly：因子分析模块
