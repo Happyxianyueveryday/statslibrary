@@ -21,11 +21,16 @@
    > 4. 该成员方法的第三个参数n_components=2指定保留的主要的因子个数。
    > 5. 返回值为因子分析的结果，即因子载荷矩阵，因子载荷矩阵的每一列代表一个特征，每一行代表一个样本，例如矩阵中坐标为(x,y)的元素表示在样本x中特征y的因子权重。
    
-      data=np.array([1,2,3],[4,5,6]])
+      data=np.array([[1,2,3],[4,5,6]])
+      fa=fa.FacAnaly()
       print(fa.analy(data,rowvar=False,n_components=2))
-      
-      >>> 输出
    
-   ## 示例代码：城市经济数据的因子分析
+   
+  ## 示例代码：城市经济数据的因子分析
+  考虑如下的城市经济数据。
+  ![avatar](https://github.com/Happyxianyueveryday/statslibrary/blob/master/FacAnaly/pics/QQ%E6%88%AA%E5%9B%BE20190417095029.png)
+  ![avatar](https://github.com/Happyxianyueveryday/statslibrary/blob/master/FacAnaly/pics/QQ%E6%88%AA%E5%9B%BE20190417095125.png)
+  
+  
    
 
