@@ -31,6 +31,47 @@
   ![avatar](https://github.com/Happyxianyueveryday/statslibrary/blob/master/FacAnaly/pics/QQ%E6%88%AA%E5%9B%BE20190417095029.png)
   ![avatar](https://github.com/Happyxianyueveryday/statslibrary/blob/master/FacAnaly/pics/QQ%E6%88%AA%E5%9B%BE20190417095125.png)
   
+  我们对上述的城市经济数据进行因子分析，计算出因子载荷矩阵，从而判断每个特征的影响的大小。
+  
+  ```
+  import numpy as np
+import FacAnaly as fa
+import pandas as pd
+import math
+import sys
+
+# 1. 按列读取原始数据
+np.set_printoptions(suppress = True)
+data = pd.read_csv(sys.path[0]+'\\data.csv')
+del data['城市']                                                       # 删除无效的城市名一列
+col_data = np.array([data['x'+str(i)].values for i in range(1,13)])    # 读取各个特征所在的列
+
+data=col_data
+
+fa=fa.FacAnaly()
+
+print("m = 12的载荷矩阵")
+print(fa.analy(data,rowvar=False,n_components=12))
+
+print("m = 3的载荷矩阵")
+print(fa.analy(data,rowvar=False,n_components=3))
+
+print("m = 4的载荷矩阵")
+print(fa.analy(data,rowvar=False,n_components=4))
+
+print("m = 5的载荷矩阵")
+print(fa.analy(data,rowvar=False,n_components=5))
+  ```
+  
+分析结果如下所示。
+
++ m = 12时的载荷矩阵
+![avatar](https://github.com/Happyxianyueveryday/statslibrary/blob/master/FacAnaly/pics/QQ%E6%88%AA%E5%9B%BE20190417005816.png)
+
++ m = 3，4，5时的载荷矩阵
+![avatar](https://github.com/Happyxianyueveryday/statslibrary/blob/master/FacAnaly/pics/QQ%E6%88%AA%E5%9B%BE20190417005321.png)
+![avatar](https://github.com/Happyxianyueveryday/statslibrary/blob/master/FacAnaly/pics/QQ%E6%88%AA%E5%9B%BE20190417005816.png)
+  
   
    
 
