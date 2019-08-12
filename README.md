@@ -33,4 +33,4 @@ statslibrary是个人实现的，基于numpy库的小型统计分析方法库，
 #### 1. FacAnaly：因子分析模块
 
 ### 其他
-#### 1. DecisionTree：决策树模块
+#### 1. DecisionTree：决策树与随机森林模块
