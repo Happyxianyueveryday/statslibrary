@@ -1,5 +1,5 @@
 # statslibrary
-中山大学统计分析与机器学习课程实验作业/Experimental homework of statistical-analysis-method-course in SYSU.
+统计分析与机器学习课程实验作业
 
 statslibrary是个人实现的，基于numpy库的小型统计分析方法库，仅基于numpy实现，不会使用较为现成的算法，包含主成分分析，聚类分析等统计分析算法的实现。
 
